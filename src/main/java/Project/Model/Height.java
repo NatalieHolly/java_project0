@@ -1,4 +1,4 @@
-package Model;
+package Project.Model;
 
 import java.sql.Timestamp;
 
@@ -15,6 +15,10 @@ public class Height {
 
     public Height(double height){
         this.height = height;
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     @Override

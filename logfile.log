@@ -1,0 +1,6 @@
+INFO	2024-01-27 15:27:12,215	0	Project.Main	[main]	Getting all height entries: []
+INFO	2024-01-27 15:27:17,803	5588	Project.Main	[main]	Attempting to add a new height entry.34
+INFO	2024-01-27 15:27:23,686	11471	Project.Main	[main]	Attempting to add a new height entry.35
+INFO	2024-01-27 15:27:28,388	16173	Project.Main	[main]	Attempting to add a new height entry.38.7
+INFO	2024-01-27 15:27:30,835	18620	Project.Main	[main]	Getting all height entries: [Entry{height=34.0, dateAdded=2024-01-27 15:27:17.802}, Entry{height=35.0, dateAdded=2024-01-27 15:27:23.686}, Entry{height=38.7, dateAdded=2024-01-27 15:27:28.388}]
+INFO	2024-01-27 15:27:38,921	26706	Project.Main	[main]	Attempting to get the max height entry.38.7
