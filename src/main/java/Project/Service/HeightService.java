@@ -1,15 +1,15 @@
 /**
  * HeightService Class
- * - This class provides methods to:
+ * - This class provides the following services:
  *      addEntry - Add a new height entry to the tracker
+ *      maxHeight - Return the max height entry in the list
+ *      getAllEntries - Get all entries in the height list
  *
  */
 package Project.Service;
 import Project.Exceptions.HeightExceptions;
-import Project.Exceptions.MenuExceptions;
 import Project.Model.Height;
 import Project.Main;
-
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,9 @@ public class HeightService {
             Height e = new Height(newHeightInput, currentTime); //create new object with current entry info
             heightList.add(e); //add entry info to growth list
         } else {
+            Main.log.warn("Invalid height entered: " + height);
             throw new HeightExceptions("Invalid height entered.");
+
         }
 
     }
