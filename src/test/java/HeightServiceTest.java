@@ -46,10 +46,11 @@ public class HeightServiceTest {
 
     @Test
     public void heightMaxView() {
-        List<Height> testHeightList = new ArrayList<>();
+        //arrange
+        List<Height> testHeightList = new ArrayList<>();  //instantiate new height list
         Timestamp testTimeStamp = new Timestamp(System.currentTimeMillis());
-        Height test1 = new Height(30.0, testTimeStamp);
-        Height actualMax = new Height(40.0, testTimeStamp);
+        Height test1 = new Height(30.0, testTimeStamp); //Height test entry
+        Height actualMax = new Height(40.0, testTimeStamp); //Height max test entry
         testHeightList.add(test1);
         testHeightList.add(actualMax);
 
@@ -58,6 +59,7 @@ public class HeightServiceTest {
         //assert
         Assert.assertEquals(testMaxHeight, actualMax.getHeight(),0.000000000000001);
     }
+
 
 }
 

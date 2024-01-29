@@ -1,3 +1,8 @@
+/**
+ * Height Class
+ * This class contains entry definitions and getHeight getter
+ */
+
 package Project.Model;
 
 import java.sql.Timestamp;

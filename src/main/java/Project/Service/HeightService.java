@@ -1,10 +1,9 @@
 /**
  * HeightService Class
- * - This class provides the following services:
+ * - Services in this class:
  *      addEntry - Add a new height entry to the tracker
  *      maxHeight - Return the max height entry in the list
  *      getAllEntries - Get all entries in the height list
- *
  */
 package Project.Service;
 import Project.Exceptions.HeightExceptions;
