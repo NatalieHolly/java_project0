@@ -19,12 +19,12 @@ public class HeightService {
         heightList = new ArrayList<>(); //Constructor to create an instance of the class
     }
     //Method to add new growth entry
-    public void addEntry(String height) throws HeightExceptions{//get entry input from user & add it to the growthList
+    public void addEntry(String childName, String height) throws HeightExceptions{//get entry input from user & add it to the growthList
         Timestamp currentTime = new Timestamp(System.currentTimeMillis());
         if (HeightExceptions.isNumber(height)) {
-            Main.log.info("Attempting to add a new height entry." + height);
+            Main.log.info("Attempting to add a new height entry. childName: " + childName + ", height: " + height);
             double newHeightInput = Double.parseDouble(height);
-            Height e = new Height(newHeightInput, currentTime); //create new object with current entry info
+            Height e = new Height(childName, newHeightInput, currentTime); //create new object with current entry info
             heightList.add(e); //add entry info to growth list
         } else {
             Main.log.warn("Invalid height entered: " + height);
@@ -47,7 +47,19 @@ public class HeightService {
                 maxHeight = entry.getHeight();
             }
         }
-        Main.log.info("Attempting to get the max height entry." + maxHeight);
+//        Main.log.info("Attempting to get the max height entry. " + maxHeight);
+        return maxHeight;
+    }
+
+    public double getMaxHeightByName(String childName, List<Height> heightList){
+        double maxHeight = Double.MIN_VALUE;
+//        double maxHeight = 0;
+        for(Height entry : heightList){
+            if (entry.getChildName().equals(childName) && (entry.getHeight() > maxHeight)) {
+                maxHeight = entry.getHeight();
+            }
+        }
+        Main.log.info("Attempting to get the max height entry. childName: " + childName + ", maxHeight: " + maxHeight);
         return maxHeight;
     }
 

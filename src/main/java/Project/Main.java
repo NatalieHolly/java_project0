@@ -1,5 +1,4 @@
 package Project;
-import java.awt.*;
 import java.util.List;
 import java.util.Scanner;
 
@@ -36,10 +35,12 @@ public class Main {
                     throw new MenuExceptions("Entered an invalid menu option.");
                 }
                 if (input.equals("add")) {  //get entry info then add growth entry to list
+                    System.out.println("Enter your child's name: ");
+                    String childName = sc.nextLine();
                     System.out.println("Enter your child's new height: ");
                     String heightInput = sc.nextLine();
 //                    double newHeightInput = Double.parseDouble(heightInput);
-                    heightService.addEntry(heightInput);
+                    heightService.addEntry(childName, heightInput);
                     System.out.println("Entry added!");
                 } else if (input.equals("view")) {
                     //view list of growth entries
@@ -49,7 +50,9 @@ public class Main {
                     if (heightList.isEmpty()) {
                         System.out.println("Your tracker is currently empty. You can view your child's tallest height once you've made at least one entry.");
                     } else {
-                        double maxHeight = heightService.maxHeight(heightList);
+                        System.out.println("Which child are you searching for: ");
+                        String childSearch = sc.nextLine();
+                        double maxHeight = heightService.getMaxHeightByName(childSearch, heightList);
                         System.out.println("Your child has grown to " + maxHeight + " inches!");
                     }
                 } else {
@@ -61,6 +64,9 @@ public class Main {
             } catch (HeightExceptions exception) {
                 System.out.println("You've caused an exception, likely do to an input error.");
                 exception.printStackTrace();
+//            } catch (ChildNameException exception) {
+//                System.out.println("You've caused an exception, likely do to an input error.");
+//                exception.printStackTrace();
             }
         }
     }
