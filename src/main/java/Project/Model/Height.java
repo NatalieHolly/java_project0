@@ -20,6 +20,10 @@ public class Height {
         this.dateAdded = dateAdded;
     }
 
+    public Height() {
+
+    }
+
     public String getChildName() {
         return childName;
     }

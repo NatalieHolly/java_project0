@@ -1,3 +1,5 @@
-INFO	2024-01-29 19:26:01,285	0	Project.Main	[main]	Getting all height entries: []
-INFO	2024-01-29 19:26:01,294	9	Project.Main	[main]	Attempting to add a new height entry. childName: Test, height: 30.0
-INFO	2024-01-29 19:26:01,310	25	Project.Main	[main]	Getting all height entries: [Height{childName='Test', height=30.0, dateAdded=2024-01-29 19:26:01.287}]
+INFO	2024-01-31 11:50:03,606	0	Project.Main	[main]	Getting all height entries: []
+INFO	2024-01-31 11:50:26,647	23041	Project.Main	[main]	Attempting to add a new height entry. childName: Sam, height: 34
+INFO	2024-01-31 11:50:36,313	32707	Project.Main	[main]	Attempting to add a new height entry. childName: Sam, height: 36.7
+INFO	2024-01-31 11:50:43,557	39951	Project.Main	[main]	Attempting to add a new height entry. childName: Bob, height: 45
+INFO	2024-01-31 11:50:52,117	48511	Project.Main	[main]	Attempting to get the max height entry. childName: Sam, maxHeight: 36.7

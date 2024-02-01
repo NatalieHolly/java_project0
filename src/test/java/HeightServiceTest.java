@@ -13,6 +13,7 @@ import java.util.List;
 public class HeightServiceTest {
     HeightService heightService;
 
+
     @Before
     public void setUp() {
         heightService = new HeightService();
@@ -58,7 +59,7 @@ public class HeightServiceTest {
         testHeightList.add(test2Child);
 
         //act
-        double testMaxHeight = heightService.maxHeight(testHeightList);
+        double testMaxHeight = heightService.getMaxHeightByName(test1actualMax.getChildName(), testHeightList);
         //assert
         Assert.assertEquals(testMaxHeight, test1actualMax.getHeight(),0.000000000000001);
     }
